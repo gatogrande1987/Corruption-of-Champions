@@ -167,7 +167,26 @@ use namespace CoC;
 				minedStones = Math.round(minedStones);
 				fatigue(50, USEFATG_PHYSICAL);
 				SceneLib.forgefatherScene.incrementEbonySupply(minedStones);
+				player.mineXP(1);
+				findGem();
 				camp.returnToCampUseTwoHours();
+			}
+		}
+
+		private function findGem():void {
+			if (player.miningLevel > 4) {
+				if (rand(4) == 0) {
+					inventory.takeItem(useables.AMEGEM, camp.returnToCampUseTwoHours);
+					player.mineXP(2);
+				}
+				else {
+					outputText("After attempt to mine Amethysts you ended with unusable piece.");
+					doNext(camp.returnToCampUseTwoHours);
+				}
+			}
+			else {
+				outputText(" Your mining skill is too low to find any Amethysts.");
+				doNext(camp.returnToCampUseTwoHours);
 			}
 		}
 	}

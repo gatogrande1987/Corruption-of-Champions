@@ -1210,98 +1210,98 @@ public class PlayerAppearance extends BaseContent {
 			outputText("\n<font color=\"#0000a0\">" + (player.hasPerk(PerkLib.GargoylePure) ? "Pure ":"Corrupted ") + Forgefather.materialWord() + " Gargoyle: " + player.gargoyleScore());
 			switch (Forgefather.material) {
 				case "stone":
-					if (Forgefather.refinement == 1) {
+					if (Forgefather.refinement == 0) {
 						tempStr+=50; tempTou+=50; tempSpd+=50; tempInt +=50; tempWis+=50;
 					}
-					if (Forgefather.refinement == 2) {
+					if (Forgefather.refinement == 1) {
 						tempStr+=75; tempTou+=75; tempSpd+=75; tempInt +=75; tempWis+=75;
 					}
-					if (Forgefather.refinement == 3) {
+					if (Forgefather.refinement == 2) {
 						tempStr+=100; tempTou+=100; tempSpd+=100; tempInt +=100; tempWis+=100;
 					}
 					break;
 				case "alabaster":					
-					if (Forgefather.refinement == 1) {
+					if (Forgefather.refinement == 0) {
 						tempInt+=100; tempWis+=50; tempMana+=20; tempSDmg+=15; tempStr-=10; tempSpd -=10;
 					}
-					if (Forgefather.refinement == 2) {
+					if (Forgefather.refinement == 1) {
 						tempInt+=150; tempWis+=75; tempMana+=25; tempSDmg+=25; tempStr-=15; tempSpd -=15;
+					}
+					if (Forgefather.refinement == 2) {
+						tempInt+=200; tempWis+=100; tempMana+=35; tempSDmg+=50; tempStr-=20; tempSpd -=20;
 					}
 					if (Forgefather.refinement == 3) {
 						tempInt+=200; tempWis+=100; tempMana+=35; tempSDmg+=50; tempStr-=20; tempSpd -=20;
 					}
 					if (Forgefather.refinement == 4) {
-						tempInt+=200; tempWis+=100; tempMana+=35; tempSDmg+=50; tempStr-=20; tempSpd -=20;
-					}
-					if (Forgefather.refinement == 5) {
 						tempInt+=500; tempWis+=250; tempMana+=50; tempSDmg+=100; tempStr-=30; tempSpd -=30;
 					}
 					break;
 				case "ebony":
-					if (Forgefather.refinement == 1) {
+					if (Forgefather.refinement == 0) {
 						tempStr+=100; tempSpd+=50; tempWrath+=20; tempMDmg+=15; tempInt -=10; tempWis-=10;
 					}
-					if (Forgefather.refinement == 2) {
+					if (Forgefather.refinement == 1) {
 						tempStr+=150; tempSpd+=75; tempWrath+=25; tempMDmg+=25; tempInt -=15; tempWis-=15;
+					}
+					if (Forgefather.refinement == 2) {
+						tempStr+=200; tempSpd+=100; tempWrath+=35; tempMDmg+=50; tempInt -=20; tempWis-=20;
 					}
 					if (Forgefather.refinement == 3) {
 						tempStr+=200; tempSpd+=100; tempWrath+=35; tempMDmg+=50; tempInt -=20; tempWis-=20;
 					}
 					if (Forgefather.refinement == 4) {
-						tempStr+=200; tempSpd+=100; tempWrath+=35; tempMDmg+=50; tempInt -=20; tempWis-=20;
-					}
-					if (Forgefather.refinement == 5) {
 						tempStr+=500; tempSpd+=250; tempWrath+=50; tempMDmg+=100; tempInt -=30; tempWis-=30;
 					}
 					break;
 				case "granite":
-					if (Forgefather.refinement == 1) {
+					if (Forgefather.refinement == 0) {
 						tempTou+=100; tempStr+=50; tempHP+=20; tempDRes+=15; tempInt-=10; tempWis-=10;
 					}
-					if (Forgefather.refinement == 2) {
+					if (Forgefather.refinement == 1) {
 						tempTou+=150; tempStr+=75; tempHP+=25; tempDRes+=25; tempInt-=15; tempWis-=15;
+					}
+					if (Forgefather.refinement == 2) {
+						tempTou+=200; tempStr+=100; tempHP+=35; tempDRes+=50; tempInt-=20; tempWis-=20;
 					}
 					if (Forgefather.refinement == 3) {
 						tempTou+=200; tempStr+=100; tempHP+=35; tempDRes+=50; tempInt-=20; tempWis-=20;
 					}
 					if (Forgefather.refinement == 4) {
-						tempTou+=200; tempStr+=100; tempHP+=35; tempDRes+=50; tempInt-=20; tempWis-=20;
-					}
-					if (Forgefather.refinement == 5) {
 						tempTou+=500; tempStr+=250; tempHP+=50; tempDRes+=100; tempInt-=30; tempWis-=30;
 					}
 					break;
 				case "marble":
-					if (Forgefather.refinement == 1) {
+					if (Forgefather.refinement == 0) {
 						tempWis+=100; tempStr+=50; tempSF+=20; tempUDmg+=15; tempInt-=10;
 					}
-					if (Forgefather.refinement == 2) {
+					if (Forgefather.refinement == 1) {
 						tempWis+=150; tempStr+=75; tempSF+=25; tempUDmg+=25; tempInt-=15;
+					}
+					if (Forgefather.refinement == 2) {
+						tempWis+=200; tempStr+=100; tempSF+=35; tempUDmg+=50; tempInt-=20;
 					}
 					if (Forgefather.refinement == 3) {
 						tempWis+=200; tempStr+=100; tempSF+=35; tempUDmg+=50; tempInt-=20;
 					}
 					if (Forgefather.refinement == 4) {
-						tempWis+=200; tempStr+=100; tempSF+=35; tempUDmg+=50; tempInt-=20;
-					}
-					if (Forgefather.refinement == 5) {
 						tempWis+=500; tempStr+=250; tempSF+=50; tempUDmg+=100; tempInt-=30;
 					}
 					break;
 				case "sandstone":
-					if (Forgefather.refinement == 1) {
+					if (Forgefather.refinement == 0) {
 						tempSpd+=100; tempStr+=25; tempInt+=25; tempFat+=20; tempRDmg+=15; tempWis-=10;
 					}
-					if (Forgefather.refinement == 2) {
+					if (Forgefather.refinement == 1) {
 						tempSpd+=150; tempStr+=35; tempInt+=35; tempFat+=25; tempRDmg+=25; tempWis-=15;
 					}
-					if (Forgefather.refinement == 3) {
+					if (Forgefather.refinement == 2) {
 						tempSpd+=200; tempStr+=50; tempInt+=50; tempFat+=35; tempRDmg+=50; tempWis-=20;
 					}
-					if (Forgefather.refinement == 4) {
+					if (Forgefather.refinement == 3) {
 						tempSpd+=200; tempStr+=125; tempInt+=125; tempFat+=35; tempRDmg+=50; tempWis-=20;
 					}
-					if (Forgefather.refinement == 5) {
+					if (Forgefather.refinement == 4) {
 						tempSpd+=500; tempStr+=125; tempInt+=125; tempFat+=50; tempRDmg+=100; tempWis-=30;
 					}
 					break;
@@ -1317,24 +1317,24 @@ public class PlayerAppearance extends BaseContent {
 			switch(Forgefather.channelInlay)
 			{
 				case "amethyst":
-					if (Forgefather.refinement == 4) tempDarkDmg += 25;
-					if (Forgefather.refinement == 5) tempDarkDmg += 50;
+					if (Forgefather.refinement == 3) tempDarkDmg += 25;
+					if (Forgefather.refinement == 4) tempDarkDmg += 50;
 					break;
 				case "emerald":
-					if (Forgefather.refinement == 4) tempSpd += 15;
-					if (Forgefather.refinement == 5) tempSpd += 30;
+					if (Forgefather.refinement == 3) tempSpd += 15;
+					if (Forgefather.refinement == 4) tempSpd += 30;
 					break;
 				case "ruby":
-					if (Forgefather.refinement == 4) tempFireDmg += 25;
-					if (Forgefather.refinement == 5) tempFireDmg += 50;
+					if (Forgefather.refinement == 3) tempFireDmg += 25;
+					if (Forgefather.refinement == 4) tempFireDmg += 50;
 					break;
 				case "sapphire":
-					if (Forgefather.refinement == 4) tempIceDmg += 25;
-					if (Forgefather.refinement == 5) tempIceDmg += 50;
+					if (Forgefather.refinement == 3) tempIceDmg += 25;
+					if (Forgefather.refinement == 4) tempIceDmg += 50;
 					break;
 				case "topaz":
-					if (Forgefather.refinement == 4) tempLtngDmg += 25;
-					if (Forgefather.refinement == 5) tempLtngDmg += 50;
+					if (Forgefather.refinement == 3) tempLtngDmg += 25;
+					if (Forgefather.refinement == 4) tempLtngDmg += 50;
 					break;
 				default:
 					break;
@@ -1342,24 +1342,24 @@ public class PlayerAppearance extends BaseContent {
 			switch(Forgefather.gem)
 			{
 				case "amethyst":
-					if (Forgefather.refinement == 4) tempDarkDmg += 12;
-					if (Forgefather.refinement == 5) tempDarkDmg += 25;
+					if (Forgefather.refinement == 3) tempDarkDmg += 12;
+					if (Forgefather.refinement == 4) tempDarkDmg += 25;
 					break;
 				case "emerald":
-					if (Forgefather.refinement == 4) tempSpd += 7;
-					if (Forgefather.refinement == 5) tempSpd += 15;
+					if (Forgefather.refinement == 3) tempSpd += 7;
+					if (Forgefather.refinement == 4) tempSpd += 15;
 					break;
 				case "ruby":
-					if (Forgefather.refinement == 4) tempFireDmg += 12;
-					if (Forgefather.refinement == 5) tempFireDmg += 25;
+					if (Forgefather.refinement == 3) tempFireDmg += 12;
+					if (Forgefather.refinement == 4) tempFireDmg += 25;
 					break;
 				case "sapphire":
-					if (Forgefather.refinement == 4) tempIceDmg += 12;
-					if (Forgefather.refinement == 5) tempIceDmg += 25;
+					if (Forgefather.refinement == 3) tempIceDmg += 12;
+					if (Forgefather.refinement == 4) tempIceDmg += 25;
 					break;
 				case "topaz":
-					if (Forgefather.refinement == 4) tempLtngDmg += 12;
-					if (Forgefather.refinement == 5) tempLtngDmg += 25;
+					if (Forgefather.refinement == 3) tempLtngDmg += 12;
+					if (Forgefather.refinement == 4) tempLtngDmg += 25;
 					break;
 				default:
 					break;

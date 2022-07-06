@@ -1615,10 +1615,10 @@ public class Combat extends BaseContent {
 		}
 		if (player.isGargoyle() && Forgefather.material == "marble")
 			{
-				if (Forgefather.refinement == 1) unarmedMulti += (.15);
-				if (Forgefather.refinement == 2) unarmedMulti += (.25);
-				if (Forgefather.refinement == 3 || Forgefather.refinement == 4) unarmedMulti += (.5);
-				if (Forgefather.refinement == 5) unarmedMulti += (1);
+				if (Forgefather.refinement == 0) unarmedMulti += (.15);
+				if (Forgefather.refinement == 1) unarmedMulti += (.25);
+				if (Forgefather.refinement == 2 || Forgefather.refinement == 3) unarmedMulti += (.5);
+				if (Forgefather.refinement == 4) unarmedMulti += (1);
 			}
         if (player.statStore.hasBuff("CrinosShape") && player.hasPerk(PerkLib.ImprovingNaturesBlueprintsNaturalWeapons)) unarmed *= 1.1;
         if (player.hasPerk(PerkLib.Lycanthropy)) unarmed += 8 * (1 + player.newGamePlusMod());
@@ -14740,10 +14740,10 @@ public class Combat extends BaseContent {
         if (player.hasPerk(MutationsLib.HarpyHollowBones)) damage *= 1.2;
         if (player.hasPerk(MutationsLib.HarpyHollowBonesPrimitive)) damage *= 1.5;
         if (player.hasPerk(MutationsLib.HarpyHollowBonesEvolved)) damage *= 2;
-		if (Forgefather.channelInlay == "emerald" && Forgefather.refinement == 4) damage *= 1.25;
-		if (Forgefather.channelInlay == "emerald" && Forgefather.refinement == 5) damage *= 1.5;
-		if (Forgefather.gem == "emerald" && Forgefather.refinement == 4) damage *= 1.12;
-		if (Forgefather.gem == "emerald" && Forgefather.refinement == 5) damage *= 1.25;
+		if (Forgefather.channelInlay == "emerald" && Forgefather.refinement == 3) damage *= 1.25;
+		if (Forgefather.channelInlay == "emerald" && Forgefather.refinement == 4) damage *= 1.5;
+		if (Forgefather.gem == "emerald" && Forgefather.refinement == 3) damage *= 1.12;
+		if (Forgefather.gem == "emerald" && Forgefather.refinement == 4) damage *= 1.25;
         outputText("You focus on [Themonster], ");
 		if (player.statusEffectv1(StatusEffects.Flying) == 0) outputText("fold your wings and dive");
 		if (player.statusEffectv1(StatusEffects.Flying) == 1) outputText("direct your "+player.weaponFlyingSwordsName+" downward");

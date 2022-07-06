@@ -233,6 +233,25 @@ import classes.Scenes.SceneLib;
 				minedStones = Math.round(minedStones);
 				fatigue(50, USEFATG_PHYSICAL);
 				SceneLib.forgefatherScene.incrementSandstoneSupply(minedStones);
+				player.mineXP(1);
+				findGem();
+				doNext(camp.returnToCampUseTwoHours);
+			}
+		}
+
+		private function findGem():void {
+			if (player.miningLevel > 4) {
+				if (rand(4) == 0) {
+					inventory.takeItem(useables.EMDGEM, camp.returnToCampUseTwoHours);
+					player.mineXP(2);
+				}
+				else {
+					outputText("After attempt to mine Emeralds you ended with unusable piece.");
+					doNext(camp.returnToCampUseTwoHours);
+				}
+			}
+			else {
+				outputText(" Your mining skill is too low to find any Emeralds.");
 				doNext(camp.returnToCampUseTwoHours);
 			}
 		}
